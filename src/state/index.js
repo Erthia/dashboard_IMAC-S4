@@ -1,16 +1,38 @@
 export default{
-pets: {
-  dog: true,
-  cat: true,
-  bunny: false
-},
-emoticon:{
-  dog:[🐶,🐕,🐩],
-  cat:[🐱,🐈,😺],
-  bunny:[🐰,🐇],
-  reptile:[🐍,🐢,🦎],
-  mouse:[🐭,🐀,🐁],
-  fish:[🐠,🐟,🐡],
-  bird:[🐔,🐧,🐦,🐤,🐣,🐥,🕊,🦆,🦅,🦉]
-}
+pets:[
+  {
+    name: 'dog',
+    selected: true,
+    emoticon:[🐶,🐕,🐩]
+  },
+  {
+    name: 'cat',
+    selected: true,
+    emoticon: [🐱,🐈,😺]
+  },
+  {
+    name: 'bunny',
+    selected: false,
+    emoticon: [🐰,🐇]
+  },
+  {
+      name: 'reptile',
+      selected: false,
+      emoticon: [🐍,🐢,🦎]
+  },{
+    name: 'mouse',
+    selected: false,
+    emoticon: [🐭,🐀,🐁]
+  },
+  {
+    name: 'fish',
+    selected: false,
+    emoticon: [🐠,🐟,🐡]
+  },
+  {
+      name: 'bird',
+      selected: false,
+      emoticon:[🐔,🐧,🐦,🐤,🐣,🐥,🕊,🦆,🦅,🦉]
+  }
+]
 }

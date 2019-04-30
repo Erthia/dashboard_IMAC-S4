@@ -4,7 +4,7 @@
   "description": "projet imac",
   "main": "twiter.js",
   "scripts": {
-    "start":"node src/actions/index.js",
+    "start": "node src/actions/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Erthia/dashboard_IMAC-S4/issues"
   },
-  "homepage": "https://github.com/Erthia/dashboard_IMAC-S4#readme"
+  "homepage": "https://github.com/Erthia/dashboard_IMAC-S4#readme",
+  "dependencies": {
+    "twit": "^2.2.11"
+  }
 }

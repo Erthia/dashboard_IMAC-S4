@@ -5,7 +5,7 @@ const PetsView= (props)=> {
     h('header',[
       h('h1', 'Worldwide Pets Emojis Distribution','')
     ],''),
-    h('div'[Graph(props),Liste(props)],'content')
+    h('div'[Graph(props),Liste(props.pets)],'content')
   ],'')
 }
 /*

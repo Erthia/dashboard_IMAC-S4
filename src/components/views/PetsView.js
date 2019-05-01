@@ -1,8 +1,8 @@
 import { h } from 'hyperapp'
 
 export default () =>
-  <div>
-    <header>
-      <h1>Worldwide Pets Emojis Distribution</h1>
-    </header>
-  </div>
+  h('div', {},
+    h('header', {},
+      h('h1', {}, 'Pets emojis distribution')
+    )
+  )

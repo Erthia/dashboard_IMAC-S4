@@ -1,4 +1,4 @@
-import { h, app } from 'https://unpkg.com/hyperapp?module'
+import { h, app } from 'hyperapp'
 
 import actions from './actions'
 import state from './state'

@@ -1,8 +1,8 @@
 import { h } from 'hyperapp'
+import Header from '../Header'
 
 export default () =>
-  h('div', {},
-    h('header', {},
-      h('h1', {}, 'Countries and pets emojis')
-    )
-  )
+  h('div', {}, [
+    Header(),
+    h('h1', {}, 'Countries and pets emojis')
+  ])

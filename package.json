@@ -4,6 +4,7 @@
   "description": "",
   "main": "src/index.js",
   "dependencies": {
+    "chart.js": "^2.8.0",
     "hyperapp": "^1.2.9",
     "webpack": "^4.30.0",
     "webpack-cli": "^3.3.1"

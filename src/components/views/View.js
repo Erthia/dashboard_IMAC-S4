@@ -1,6 +1,6 @@
 import { h } from 'hyperapp'
 import Header from '../Header'
-//import {PieTemplate, HorizontalBarTemplate} from '../ChartsTemplate'
+import {PieTemplate, HorizontalBarTemplate} from '../ChartsTemplate'
 import Charts from '../Charts'
 
 export default (state) =>

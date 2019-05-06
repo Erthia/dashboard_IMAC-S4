@@ -2,10 +2,10 @@ import { h } from 'hyperapp'
 import Chart from 'chart.js'
 
 
-export const PieTemplate = (props) => {
+export const PieTemplate = (props) => ({
 	type: 'pie',
   data: {
-    labels: ['Cat', 'Dog', 'Rabbit', 'Bird', 'Snake', 'Fish', 'Turtle', 'Mouse'],//props.labels, // => "Cat", "Dog", "Rabbit", "Bird", "Snake", "Fish", "Turtle", "Mouse"
+    labels: ['Cat', 'Dog 🐕', 'Rabbit', 'Bird', 'Snake', 'Fish', 'Turtle', 'Mouse'],//props.labels, // => "Cat", "Dog", "Rabbit", "Bird", "Snake", "Fish", "Turtle", "Mouse"
     datasets: [{
       labels: "Pourcentage of emojis by species",
       backgroundColor: ['#3e95cd', '#f4ac41', '#8e5ea2', '#3cba9f', '#f46441', '#e8c3b9', '#c45850', '#1d15da'],
@@ -19,9 +19,9 @@ export const PieTemplate = (props) => {
       text: "Pourcentage of emojis by species"
     },
   }
-},
+})
 
-export const HorizontalBarTemplate = (props) => {
+export const HorizontalBarTemplate = (props) => ({
 	type: 'horizontalBar',
   data: {
     labels: props.labels, // => "France", "Italy", "Germany", etc...
@@ -39,4 +39,4 @@ export const HorizontalBarTemplate = (props) => {
       text: "Pourcentage of emojis by country",
     },
   }
-}
+})

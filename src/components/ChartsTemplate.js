@@ -19,7 +19,7 @@ export const PieTemplate = (props) => {
       text: "Pourcentage of emojis by species"
     },
   }
-}
+},
 
 export const HorizontalBarTemplate = (props) => {
 	type: 'horizontalBar',

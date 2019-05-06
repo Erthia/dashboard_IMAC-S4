@@ -3,7 +3,7 @@ import Chart from 'chart.js'
 
 // USING TEMPLATE, CURRENTLY NOT WORKING BECAUSE OF ??? 
 /*
-const TheChart = (props) => {
+const TheChart0 = (props) => {
 	const myChart = props
   return h('canvas', {
     oncreate: (element) => {
@@ -45,7 +45,7 @@ const TheChart2 = (props) => {
 	const myChart2 = {
 	type: 'pie',
   data: {
-    labels: ['Cat', 'Dog', 'Rabbit', 'Bird', 'Snake', 'Fish', 'Turtle', 'Mouse'],//data.labels, // => "Cat", "Dog", "Rabbit", "Bird", "Snake", "Fish", "Turtle", "Mouse"
+    labels: ['Cat', 'Dog', 'Rabbit', '🐱', 'Snake', 'Fish', 'Turtle', 'Mouse'],//data.labels, // => "Cat", "Dog", "Rabbit", "Bird", "Snake", "Fish", "Turtle", "Mouse"
     datasets: [{
       labels: "Pourcentage of emojis by species",
       backgroundColor: ['#3e95cd', '#f4ac41', '#8e5ea2', '#3cba9f', '#f46441', '#e8c3b9', '#c45850', '#1d15da'],
@@ -67,12 +67,11 @@ const TheChart2 = (props) => {
       }});
 }
 
-
 export default () => 
 	h('div', {}, [
 	h('h2', {}, 'PIE CHART'),
 		TheChart2({values:[25, 10, 5, 2, 20, 30, 5, 7]}),
-    //TheChart2({pieTemplate(values:[1, 10, 5, 2, 20, 30, 45, 7])}),
+    //TheChart0({pieTemplate(values:[1, 10, 5, 2, 20, 30, 45, 7])}),
     h('h2', {}, 'COUNTRY CHART'),
     TheChart({values:[1, 10, 5, 2, 20, 30, 45, 7]}),
     ]

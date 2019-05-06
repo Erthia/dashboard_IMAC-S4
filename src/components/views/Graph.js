@@ -15,8 +15,8 @@ const Graph = (props)=>{
     T.get('search/tweets',param, adToGraph)
     }
   })
-  return
+  return //graph
 }
 function adToGraph(err,data,response){
-  toGraph.push(data.length)
+  toGraph.push(data.status.length)
 }

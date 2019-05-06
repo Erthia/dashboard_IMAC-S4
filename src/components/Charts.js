@@ -73,7 +73,7 @@ export default () =>
 		TheChart2({values:[25, 10, 5, 2, 20, 30, 5]}),
     //TheChart0({pieTemplate(values:[1, 10, 5, 2, 20, 30, 45, 7])}),
     h('h2', {}, 'COUNTRY CHART'),
-    TheChart({values:[1, 10, 5, 2, 20, 30, 45, 7]}),
+    TheChart({values:[1, 10, 5, 2, 20, 30, 45]}),
     ]
 );
  /*<div>

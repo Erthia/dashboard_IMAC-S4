@@ -4,7 +4,7 @@ module.export = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'main.js'
+    filename: 'bundle.js'
   },
   module: {
     rules: [
@@ -13,6 +13,10 @@ module.export = {
         loader: "babel-loader"
       }
     ]
+  },
+  devtool: 'inline-source-map',
+  devServer: {
+    contentBase: './dist'
   }
 };
 

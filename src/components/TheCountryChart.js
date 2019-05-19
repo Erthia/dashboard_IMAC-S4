@@ -6,18 +6,20 @@ const TheChart = (props) => {
 	const myChart = {
 		type: 'horizontalBar',
   data: {
-    labels: ['France', 'Germany', 'USA', 'Australia', 'Brazil'],//props.labels, // => "France", "Italy", "Germany", etc...
+    labels: props.labels,
     datasets: [{
       labels: "Number of emojis included in tweets",
-      backgroundColor: ['#3e95cd', '#f4ac41', '#8e5ea2', '#3cba9f', '#f46441', '#e8c3b9', '#c45850', '#1d15da'],
+      backgroundColor: props.color,
       borderColor: 'rgb(0, 0, 0)',
-      data: props.values // our number of occurrence
+      data: props.values
     }]
   },
   options: {
+    responsive: true,
   	legend: { display: false },
     title: {
       display: true,
+      position: 'top',
       text: "Pourcentage of emojis by country"
     },
   }
@@ -29,9 +31,8 @@ const TheChart = (props) => {
       }});
 }
 
-export default (props) => 
-h('div', {}, [
-	h('h2', {}, 'COUNTRY CHART'),
-    TheChart({values:[1, 10, 5, 2, 20, 30, 45]}),
+export default (state,props) => 
+h('div', {class:'chartStyle'}, [
+    TheChart({labels: state.countries, color:state.myBG, values:state.countryValues}),
     ]
 );

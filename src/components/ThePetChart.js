@@ -2,12 +2,9 @@ import { h } from 'hyperapp'
 import Chart from 'chart.js'
 import ChartLabels from 'chartjs-plugin-labels';
 
-let myValues = [25, 8, 35, 2, 10, 6, 5];
-let myLabels =  ['🐶', '🐰', '🐱', '🐍', '🐠', '🐭', '🐥'];
-let myBG = ['#3e95cd', '#f4ac41', '#8e5ea2', '#3cba9f', '#f46441', '#e8c3b9', '#c45850', '#1d15da', '#3e95cd'];
 
 const TheChart2 = (props) => {
-	const myChart2 = {
+	const myChart = {
   type: 'pie',
   data: {
     labels: props.labels, //data.labels, // => "Cat", "Dog", "Rabbit", "Bird", "Snake", "Fish", "Turtle", "Mouse"
@@ -18,8 +15,9 @@ const TheChart2 = (props) => {
     }]
   },
   options: {
+    responsive: true,
     legend: {
-      position: 'bottom',
+      position: 'right',
       labels: {
         usePointStyle: true,
       },
@@ -34,7 +32,8 @@ const TheChart2 = (props) => {
     },
     title: {
       display: true,
-      text: "Pourcentage of emojis by country"
+      position: 'top',
+      text: "Pourcentage of emojis by species"
     },
    plugins: {
     labels: {
@@ -54,13 +53,12 @@ const TheChart2 = (props) => {
   return h('canvas', {
     oncreate: (element) => {
       const ctx = element.getContext('2d');
-      const chart = new Chart(ctx, myChart2)
+      const chart = new Chart(ctx, myChart)
       }});
 }
 
-export default (props) => 
-h('div', {}, [
-	  h('h2', {}, 'PIE CHART'),
-		TheChart2({values:myValues, labels:myLabels, background:myBG}),
+export default (state, props) => 
+h('div', {class:'chartStyle'}, [
+		TheChart2({values:state.myValues, labels:state.myLabels, background:state.myBG}),
     ]
 );

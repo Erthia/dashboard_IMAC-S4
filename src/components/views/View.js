@@ -4,8 +4,19 @@ import ThePetChart from '../ThePetChart'
 import TheCountryChart from '../TheCountryChart'
 
 export default (state, actions) =>
-  h('div', {}, [
-    Header({page: state.currentPage, actions: actions}),
-    h('h1', {}, ['Proportion of twits including pet emojis, by country', 'Hashtags associated with each pet emoji', 'Comparative usage of choosen pet emojis'][state.currentPage]),
-    [TheCountryChart, null, ThePetChart][state.currentPage]
+  h('body', {id:'body'}, [
+	//Header({id:'icons', page: state.currentPage, actions: actions}),
+    h('main', {id:'main'}, [
+    	h('div', {id:'titleBlock'}, [
+    		h('h1', {id:'title'}, ['Proportion of tweets including pet emojis, by country','Comparative usage of choosen pet emojis'][state.currentPage]),
+    	]),
+    	h('div', {class:'container'}, [
+    		//[TheCountryChart, ThePetChart][state.currentPage],
+    		ThePetChart,
+    		TheCountryChart
+    	]),
+   	]),
+   	h('footer', {}, [
+	    	h('p', {id:'credits'}, 'fait par Emilie Corradi, Agathe Prioleau & Laurine Sajdak')
+	    	]),  
   ])

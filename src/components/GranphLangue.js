@@ -29,5 +29,5 @@ const GraphLangue=(ISO, props)=>{
   return toGraph
 }
 funcion adToGraphlang(err,data, response){
-  toGraph.data.datasets.data.push(data.status.length)
+  toGraph.data.datasets.data.push(data.statuses.length)
 }

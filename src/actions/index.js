@@ -12,4 +12,5 @@ T.get('search/tweets', param, calbak);
 
 function calbak(err,data, response){
   console.log(data);
+  console.log(data.statuses.length);
 }

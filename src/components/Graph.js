@@ -26,5 +26,5 @@ const Graph = (props)=>{
   return toGraph
 }
 function adToGraph(err,data,response){
-  toGraph.datasets.data.push(data.status.length)
+  toGraph.datasets.data.push(data.statuses.length)
 }

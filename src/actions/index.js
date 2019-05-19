@@ -5,8 +5,8 @@ var config = require('./config');
 
 var T = new Twit(config);
 var param= {
-  q: 'banana',//mot chercher
-  count: 2};//nb de stwet chercher
+  q: '🐱',//mot chercher
+  count: 7};//nb de stwet chercher
 
 T.get('search/tweets', param, calbak);
 

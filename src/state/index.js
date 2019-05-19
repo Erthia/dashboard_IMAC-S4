@@ -3,36 +3,36 @@ pets:[
   {
     name: 'dog',
     selected: true,
-    emoticon:[🐶,🐕,🐩]
+    emoticon:['🐶','🐕','🐩']
   },
   {
     name: 'cat',
     selected: true,
-    emoticon: [🐱,🐈,😺]
+    emoticon: ['🐱','🐈','😺']
   },
   {
     name: 'bunny',
     selected: false,
-    emoticon: [🐰,🐇]
-  },
+    emoticon: ['🐰','🐇']
+  },s
   {
       name: 'reptile',
       selected: false,
-      emoticon: [🐍,🐢,🦎]
+      emoticon: ['🐍','🐢','🦎']
   },{
     name: 'mouse',
     selected: false,
-    emoticon: [🐭,🐀,🐁]
+    emoticon: ['🐭','🐀','🐁']
   },
   {
     name: 'fish',
     selected: false,
-    emoticon: [🐠,🐟,🐡]
+    emoticon: ['🐠','🐟','🐡']
   },
   {
       name: 'bird',
       selected: false,
-      emoticon:[🐔,🐧,🐦,🐤,🐣,🐥,🕊,🦆,🦅,🦉]
+      emoticon:['🐔','🐧','🐦','🐤','🐣','🐥','🕊','🦆','🦅','🦉']
   }
 ],
   Twit:null

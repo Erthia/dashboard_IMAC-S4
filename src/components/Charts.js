@@ -85,12 +85,11 @@ const TheChart2 = (props) => {
       }});
 }
 
-export default () => 
+export default (props) => 
 	h('div', {}, [
-	h('h2', {}, 'PIE CHART'),
+	h('h2', {}, ['PIE CHART', null, 'COUNTRY CHART'][props.currentPage]),
 		TheChart2({values:[25, 10, 5, 2, 20, 30, 5]}),
     //TheChart0({pieTemplate(values:[1, 10, 5, 2, 20, 30, 45, 7])}),
-    h('h2', {}, 'COUNTRY CHART'),
     TheChart({values:[1, 10, 5, 2, 20, 30, 45]}),
     ]
 );

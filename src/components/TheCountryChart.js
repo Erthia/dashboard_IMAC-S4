@@ -1,7 +1,6 @@
 import { h } from 'hyperapp'
 import Chart from 'chart.js'
-import ChartLabels from 'chartjs-plugin-labels'
-
+import ChartLabels from 'chartjs-plugin-labels';
 
 const TheChart = (props) => {
 	const myChart = {
@@ -30,9 +29,9 @@ const TheChart = (props) => {
       }});
 }
 
-export default () => 
-	h('div', {}, [
-    h('h2', {}, 'COUNTRY CHART'),
-    TheChart({values:[1, 10, 5, 2, 20, 30, 45]})
+export default (props) => 
+h('div', {}, [
+	h('h2', {}, 'COUNTRY CHART'),
+    TheChart({values:[1, 10, 5, 2, 20, 30, 45]}),
     ]
-  )
+);

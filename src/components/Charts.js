@@ -1,9 +1,15 @@
 import { h } from 'hyperapp'
 import Chart from 'chart.js'
 import ChartLabels from 'chartjs-plugin-labels';
+import {PieTemplate, HorizontalBarTemplate} from './ChartsTemplate'
+
+
+let myValues = [25, 10, 5, 2, 20, 30, 5];
+let myLabels =  ['🐶', '🐰', '🐱', '🐍', '🐠', '🐭', '🐥'];
+let myBG = ['#3e95cd', '#f4ac41', '#8e5ea2', '#3cba9f', '#f46441', '#e8c3b9', '#c45850', '#1d15da', '#3e95cd'];
 
 // USING TEMPLATE, CURRENTLY NOT WORKING BECAUSE OF ??? 
-/*
+
 const TheChart0 = (props) => {
 	const myChart = props
   return h('canvas', {
@@ -11,11 +17,11 @@ const TheChart0 = (props) => {
       const ctx = element.getContext('2d');
       const chart = new Chart(ctx, myChart)
       }});
-}*/
+}
 
 //UGLY CODE NOT USING THE TEMPLATE BUT WORKING
 
-const TheChart = (props) => {
+const BarChart = (props) => {
 	const myChart = {
 		type: 'horizontalBar',
   data: {
@@ -42,36 +48,45 @@ const TheChart = (props) => {
       }});
 }
 
-const TheChart2 = (props) => {
+const PieChart = (props) => {
 	const myChart2 = {
 	type: 'pie',
   data: {
-    labels: ['🐶', '🐰', '🐱', '🐍', '🐠', '🐭', '🐥'],//data.labels, // => "Cat", "Dog", "Rabbit", "Bird", "Snake", "Fish", "Turtle", "Mouse"
+    labels: props.labels, //data.labels, // => "Cat", "Dog", "Rabbit", "Bird", "Snake", "Fish", "Turtle", "Mouse"
     datasets: [{
       labels: "Pourcentage of emojis by species",
-      backgroundColor: ['#3e95cd', '#f4ac41', '#8e5ea2', '#3cba9f', '#f46441', '#e8c3b9', '#c45850', '#1d15da'],
+      backgroundColor: props.background,
       data: props.values // our number of occurrence
     }]
   },
   options: {
-  	legend: { display: false },
+  	legend: {
+  		position: 'bottom',
+		  labels: {
+		    usePointStyle: true,
+		  },
+		  onHover: function(event, legendItem) {
+		  	var opt = this.options || {};
+		  	var hover = opt.hover || {};
+		    var ci = this.chart;
+		    hovereIdx = legendItem.datasetIndex;
+		    ci.updateHoverStyle(ci.getDatasetMeta(hoveredIdx).data, hover.mode, true);
+		    ci.update();
+		  }
+		},
     title: {
       display: true,
       text: "Pourcentage of emojis by country"
     },
-     plugins: {
+   plugins: {
     labels: {
     	render: 'label',
-// precision for percentage, default is 0
       precision: 0,
       showZero: true,
       fontSize: 20,
-
-        fontColor: '#fff',
+      fontColor: '#fff',
         fontStyle: 'normal',
-
-        // font family, default is defaultFontFamily
-        fontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
+        fontFamily: "'Helvetica Neue', sans-serif",
         position: 'default',
         overlap: true,  
 			},
@@ -85,13 +100,14 @@ const TheChart2 = (props) => {
       }});
 }
 
+
 export default () => 
-	h('div', {}, [
-	h('h2', {}, 'PIE CHART'),
-		TheChart2({values:[25, 10, 5, 2, 20, 30, 5]}),
-    //TheChart0({pieTemplate(values:[1, 10, 5, 2, 20, 30, 45, 7])}),
+	h('div', {id:'pieChart'}, [
+		h('h2', {}, 'PIE CHART'),
+		PieChart({values:myValues, labels:myLabels, background:myBG}),
+    //TheChart0(pieTemplate({values:[1, 10, 5, 2, 20, 30, 45, 7]})),
     h('h2', {}, 'COUNTRY CHART'),
-    TheChart({values:[1, 10, 5, 2, 20, 30, 45]}),
+    BarChart({values:[1, 10, 5, 2, 20, 30, 45, 6, 8, 9]}),
     ]
 );
  /*<div>

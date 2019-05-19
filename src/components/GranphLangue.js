@@ -1,4 +1,5 @@
 inport { h } form 'hyperapp'
+var config = require('../actions/config');
 
 const GraphLangue=(ISO, props)=>{
   const nbTweet=100
@@ -13,7 +14,7 @@ const GraphLangue=(ISO, props)=>{
       }]
     }
   }
-  const T = props.Twit
+  const T = new Twit(config)
   props.pets.forEach(function(pet){
     if !pet.selected return
     const query= pet.emoticon.join(' OR ')

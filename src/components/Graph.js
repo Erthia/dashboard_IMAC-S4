@@ -1,5 +1,6 @@
 import {h} from 'hyperapp'
 
+var config = require('../actions/config');
 const Graph = (props)=>{
   const nbTweet= 200
   var toGraph={
@@ -10,7 +11,7 @@ const Graph = (props)=>{
       data: []
     }
     }
-  const T = props.Twit //pour faire court
+  const T = new Twit(config)
   props.pets.forEach(function(pet){
     if !pet.selected return
     var query = pet.emoticon.join(' OR ')

@@ -4,7 +4,7 @@ import ChartLabels from 'chartjs-plugin-labels';
 import {PieTemplate, HorizontalBarTemplate} from './ChartsTemplate'
 
 
-let myValues = [25, 10, 5, 2, 20, 30, 5];
+let myValues = [2, 1, 5, 2, 0, 3, 5];
 let myLabels =  ['🐶', '🐰', '🐱', '🐍', '🐠', '🐭', '🐥'];
 let myBG = ['#3e95cd', '#f4ac41', '#8e5ea2', '#3cba9f', '#f46441', '#e8c3b9', '#c45850', '#1d15da', '#3e95cd'];
 
@@ -61,7 +61,7 @@ const PieChart = (props) => {
   },
   options: {
   	legend: {
-  		position: 'bottom',
+  		position: 'top',
 		  labels: {
 		    usePointStyle: true,
 		  },
@@ -110,7 +110,15 @@ export default () =>
     BarChart({values:[1, 10, 5, 2, 20, 30, 45, 6, 8, 9]}),
     ]
 );
- /*<div>
+/*
+export default (props) => 
+	h('div', {}, [
+	h('h2', {}, ['PIE CHART', null, 'COUNTRY CHART'][props.currentPage]),
+		TheChart2({values:[25, 10, 5, 2, 20, 30, 5]}),
+    //TheChart0({pieTemplate(values:[1, 10, 5, 2, 20, 30, 45, 7])}),
+    TheChart({values:[1, 10, 5, 2, 20, 30, 45]}),
+
+ <div>
     <h2>PIE CHART</h2>
     <TheChart mychart = {pieTemplate(values:{[0, 10, 5, 2, 20, 30, 45, 7]})}  />
   </div>*/

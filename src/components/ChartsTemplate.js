@@ -24,12 +24,12 @@ export const PieTemplate = (props) => ({
 export const HorizontalBarTemplate = (props) => ({
 	type: 'horizontalBar',
   data: {
-    labels: props.labels, // => "France", "Italy", "Germany", etc...
+    labels: props.labels,
     datasets: [{
       labels: "Number of emojis included in tweets",
       backgroundColor: ['#3e95cd', '#f4ac41', '#8e5ea2', '#3cba9f', '#f46441', '#e8c3b9', '#c45850', '#1d15da'],
       borderColor: 'rgb(66, 134, 244)',
-      data: props.values, // our number of occurrence
+      data: props.values, 
     }]
   },
   options: {

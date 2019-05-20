@@ -17,6 +17,6 @@ export default (state, actions) =>
     	]),
    	]),
    	h('footer', {}, [
-	    	h('p', {id:'credits'}, 'fait par Emilie Corradi, Agathe Prioleau & Laurine Sajdak')
-	    	]),  
+	    h('p', {id:'credits'}, 'fait par Emilie Corradi, Agathe Prioleau & Laurine Sajdak'),
+	]), 
   ])

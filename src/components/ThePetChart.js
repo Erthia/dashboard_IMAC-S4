@@ -7,7 +7,7 @@ const TheChart2 = (props) => {
 	const myChart = {
   type: 'pie',
   data: {
-    labels: props.labels, //data.labels, // => "Cat", "Dog", "Rabbit", "Bird", "Snake", "Fish", "Turtle", "Mouse"
+    labels: props.labels,
     datasets: [{
       labels: "Pourcentage of emojis by species",
       backgroundColor: props.background,
@@ -33,7 +33,7 @@ const TheChart2 = (props) => {
     title: {
       display: true,
       position: 'top',
-      text: "Pourcentage of emojis by species"
+      text: ["Pourcentage of emojis by species", "Click on the legend to choose what to display"]
     },
    plugins: {
     labels: {

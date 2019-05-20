@@ -6,40 +6,4 @@ export default{
   countries: ['France', 'Germany', 'USA', 'Australia', 'Brazil'],
   countryValues:[1, 10, 5, 2, 20, 30, 45],
 }
-  /*pets:[
-    {
-      name: 'dog',
-      value: '25',
-      emoticon:['🐶','🐕','🐩']
-    },
-    {
-      name: 'cat',
-      value: '25',
-      emoticon: ['🐱','🐈','😺']
-    },
-    {
-      name: 'bunny',
-      value: '25',
-      emoticon: ['🐰','🐇']
-    },
-    {
-      name: 'reptile',
-      value: '25',
-      emoticon: ['🐍','🐢','🦎']
-    },
-    {
-      name: 'mouse',
-      value: '25',
-      emoticon: ['🐭','🐀','🐁']
-    },
-    {
-      name: 'fish',
-      value: '25',
-      emoticon: ['🐠','🐟','🐡']
-    },
-    {
-      name: 'bird',
-      value: '25',
-      emoticon:['🐔','🐧','🐦','🐤','🐣','🐥','🕊','🦆','🦅','🦉']
-    }
-  ]*/
+
